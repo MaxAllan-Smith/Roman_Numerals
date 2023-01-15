@@ -1,5 +1,9 @@
 class RomanNumerals
   ROMAN_NUMERALS = {
+    1000 => "M",
+    500 => "D",
+    100 => "C",
+    50 => "L",
     10 => "X",
     5 => "V",
     1 => "I"
@@ -12,12 +16,12 @@ class RomanNumerals
         numeral_string << value;
         number -= key
       }
-      puts numeral_string
     end
+    puts numeral_string
   end
   
 end
 
 run = RomanNumerals.new
 
-run.Convert(40)
+run.Convert(1245)
