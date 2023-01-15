@@ -9,7 +9,7 @@ class RomanNumerals
     1 => "I"
   }
 
-  def Convert(number)
+  def self.Convert(number)
     numeral_string = ""
     ROMAN_NUMERALS.each do |key, value|
       (number / key).times {
@@ -17,11 +17,7 @@ class RomanNumerals
         number -= key
       }
     end
-    puts numeral_string
+    numeral_string
   end
   
 end
-
-run = RomanNumerals.new
-
-run.Convert(1245)
